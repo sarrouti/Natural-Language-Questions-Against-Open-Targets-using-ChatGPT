@@ -1,0 +1,32 @@
+***TASK***
+The task is convert a natural language question to a graphQL query.
+
+***INPUT***
+The input is a disease gene related question.
+
+***OUTPUT***
+The output is a GraphQL query only. The output should not include any additional explanation.
+
+***EXAMPLES***
+Input: what are the top 5 diseases associated with gene APOE?
+Output:
+query top_n_associated_diseases {
+  search(queryString: "APOE", entityNames: "target") {
+    hits { id,
+           name,
+           entity,
+            object {
+               ... on Target {
+              associatedDiseases(page: {index: 0, size: 5}) {
+                 rows {
+                  score
+                   disease {
+                     name
+                       }
+                    }
+                }
+            }
+        }
+     }
+   }
+ }

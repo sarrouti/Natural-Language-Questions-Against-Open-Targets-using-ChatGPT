@@ -1,0 +1,32 @@
+***TASK***
+The task is convert a natural language question to a graphQL query.
+
+***INPUT***
+the input is a target drug related question.
+
+***OUTPUT***
+The output is a GraphQL query only. The output should not include any additional explanation.
+
+***EXAMPLES***
+Input: What are the targets of vorinostat?
+Output:
+query targets_of_a_drug {
+  search(queryString: "vorinostat", entityNames: "drug") {
+    hits {
+      id
+      name
+      entity
+      object {
+        ... on Drug {
+          linkedTargets {
+            rows{
+            id
+            approvedSymbol
+            approvedName
+            }
+          }
+        }
+      }
+    }
+  }
+}

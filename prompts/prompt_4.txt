@@ -1,0 +1,34 @@
+***TASK***
+The task is convert a natural language question to a graphQL query.
+
+***INPUT***
+the input is a target disease related question.
+***OUTPUT***
+The output is a GraphQL query only. The output should not include any additional explanation.
+
+***EXAMPLES***
+Input: Find targets associated with the disease ulcerative colitis.
+Output:
+query targets_associated_with_a_disease{
+  search(queryString: "ulcerative colitis", entityNames: "disease") {
+    hits {
+      id
+      name
+      entity
+      object {
+        ... on Disease {
+          associatedTargets {
+            rows{
+            score
+            target{
+              id
+              approvedName
+            }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
