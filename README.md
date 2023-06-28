@@ -40,11 +40,6 @@ The current pipeline can answer the following promopts:
 	diseases that are associated with genes targeted by a given drug:
 	e.g., Which diseases are associated with the genes targeted by fasudil? 
 	
-	Which prompt you would like to use?
-		    1: prompt_1
-		    2: prompt_2
-		    3: prompt_3
-		    4: prompt_4
-		    5: prompt_5   
+
  
     
