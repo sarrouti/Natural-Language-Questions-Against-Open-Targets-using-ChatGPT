@@ -13,7 +13,7 @@ pip install -r requirements.txt
 		apikey = "api_key"
 	
 ### PROMPTS:
-The current pipeline can answer the following promopts:
+The current pipeline can answer the following prompts:
 
         ## PROMPT_1:
         This prompt can be used to convert natural language questions asking to find the top n diseases
