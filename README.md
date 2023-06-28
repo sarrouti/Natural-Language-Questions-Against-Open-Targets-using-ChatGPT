@@ -1,7 +1,5 @@
 # Natural-Language-Questions-Against-Open-Targets-using-ChatGPT
-Natural Language Questions Against Open Targets using ChatGPT
-
-
+This NLP pipeline can take a natural language question, and returns an appropriate response using Open Targets API endpoints Open Targets Platform GraphQL. It first convert the question to a GraphQL query using ChatGPT and pomopts of the frequently asked questions, and then run the query using Open Targets GraphQL.
 
 
 ### Installation:
